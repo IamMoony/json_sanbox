@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul id="people"></ul>
+	<script>
+		var person = {
+			name: "Simon",
+			age: 28,
+			address:{
+				street:"Franzgasse 12",
+				city:"Vienna"
+			},
+			children:["Kate","Mark"]
+		}
+
+		// person = JSON.stringify(person);
+		// person = JSON.parse(person);
+
+		console.log(person.children[0]);
+
+
+		var people = [{
+			name:"Simon",
+			age: 28
+		},
+		{
+			name:"Steven",
+			age: 25
+		},
+		{
+			name:"Sidney",
+			age: 11
+		}
+	];
+
+	var output = '';
+
+	for(i=0; i<people.length; i++) {
+		// console.log(people[i].name)
+		output += '<li>'+people[i].age+'<li>'
+	}
+
+	document.getElementById("people").innerHTML = output;
+	</script>
+</body>
+</html>
